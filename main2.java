@@ -10,9 +10,6 @@ public class main2 {
 		int [] ladderTypes = {1, 3, 5};
 		String [] f = new String[n + 1];
 		f[0] = "1";
-		for (int i = 1; i < f.length; i++) {
-			f[i] = "0";
-		}
 		
 		for (int totalLen = 1; totalLen <= n; totalLen++) {			
 			for (int ladderLen:ladderTypes) {
@@ -27,6 +24,14 @@ public class main2 {
 	
 	public static String add(String numStr1, String numStr2)
 	{		
+		if (numStr1 == null) {
+			numStr1 = "0";
+		}
+		
+		if (numStr2 == null) {
+			numStr1 = "0";
+		}
+	
 		String computeStr = "";
 		int strlen1 = numStr1.length(), strlen2 = numStr2.length();
 		
